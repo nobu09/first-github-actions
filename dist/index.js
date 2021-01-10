@@ -1179,7 +1179,7 @@ async function run() {
     for (const filePath of filePaths) {
       const stats = fs.statSync(filePath);
 
-      if (!stat.isFile()) {
+      if (!stats.isFile()) {
         core.info(`${filePath} is not a file`);
         continue;
       }
